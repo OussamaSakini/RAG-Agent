@@ -36,6 +36,6 @@ class UploadFile:
             chatbot.append({"role": "assistant", "content": "Upload completed successfully."})
         else:
             chatbot.append({"role": "assistant", "content": "Please choose the option \"Upload doc: Process for RAG\" to upload files."})
-        # Display messages at the conversations
+
         return "", chatbot
 
