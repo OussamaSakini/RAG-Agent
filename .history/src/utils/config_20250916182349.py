@@ -5,7 +5,7 @@ class AppConfig:
         with open("config/app_config.yml") as cfg:
             app_config = yaml.load(cfg, yaml.FullLoader)
         
-        # Data Directories 
+        # Directories
         self.data_directory = app_config["directories"]["data_directory"]
         self.persist_directory = app_config["directories"]["persist_directory"]
         self.custom_persist_directory = app_config["directories"]["custom_persist_directory"]
