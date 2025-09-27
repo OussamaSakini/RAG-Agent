@@ -34,7 +34,7 @@ class ChatBot:
                             embedding_function = embedding)
             else:
                 chatbot.append(
-                    {"role" : "assistant", "content" : f"No file was uploaded. Please first upload your file(s) using the 'upload' button."})
+                    {"role" : "assistant", "content" : f"No file was uploaded. Please first upload your files using the 'upload' button."})
                 return "", chatbot, None
             
         docs = vectordb.similarity_search(message, k=app_config.k)
@@ -66,7 +66,6 @@ class ChatBot:
             
         prompt = f"{chat_history}\n{retrieved_content}\n{question}"
         print("========================")
-        print("User question : ",message)
         client = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
         response = client.chat.completions.create(
             model=app_config.llm_model,
