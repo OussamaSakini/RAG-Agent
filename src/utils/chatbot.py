@@ -34,7 +34,7 @@ class ChatBot:
                             embedding_function = embedding)
             else:
                 chatbot.append(
-                    {"role" : "assistant", "content" : f"No file was uploaded. Please first upload your files using the 'upload' button."})
+                    {"role" : "assistant", "content" : f"No file was uploaded. Please first upload your file(s) using the 'upload' button."})
                 return "", chatbot, None
             
         docs = vectordb.similarity_search(message, k=app_config.k)
