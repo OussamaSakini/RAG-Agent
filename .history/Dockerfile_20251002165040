@@ -1,0 +1,20 @@
+FROM python:3.12-slim
+
+
+WORKDIR /app
+
+# Installer dépendances système utiles (pdf, yaml, etc.)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    poppler-utils \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+# Port pour Gradio
+EXPOSE 7860
+
+CMD ["python", "src/RAG_GPT_APP.py"]
