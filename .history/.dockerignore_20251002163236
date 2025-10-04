@@ -1,0 +1,33 @@
+# --- Fichiers Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+
+# --- Virtualenv ---
+.venv/
+env/
+venv/
+.Python
+
+# --- Git ---
+.git
+.gitignore
+.history/
+
+# --- Données locales ---
+data/
+!data/vectordb/
+*.pdf
+*.jpg
+*.png
+
+# --- Config sensible ---
+.env
+*.secret
+*.key
+
+# --- Logs ---
+*.log
+logs/
