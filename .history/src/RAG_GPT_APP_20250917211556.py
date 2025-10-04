@@ -70,7 +70,9 @@ with gr.Blocks() as demo:
                                                     chatbot, ref_output],
                                             queue=False).then(lambda: gr.Textbox(interactive=True),
                                                             None, [input_txt], queue=False)
+        with gr.TabItem("SQL-GPT"):
+            gr.Markdown("Salam")
 
 
 if __name__ == "__main__":
-    demo.launch(server_name="0.0.0.0", server_port=7860)
+    demo.launch()
