@@ -1,3 +1,4 @@
+# If you use OpenAI, please add your API KEY in the environnement file 
 openai>=1.0.0
 langchain>=0.2.0
 langchain-community>=0.2.0
